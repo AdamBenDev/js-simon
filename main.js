@@ -39,8 +39,11 @@ function genera() {
 
     // il metodo "filter" e gli elementi corrispondenti sono conservati in un nuovo array "indovinati", che viene poi ordinato in ordine crescente utilizzando il metodo "sort()"
 
-    
+
     var indovinati = numeri.filter((n) => input.includes(n)).sort();
+
+    //Il messaggio di risultato viene visualizzato nell'elemento HTML con ID "risultato", indicando quanti numeri l'utente ha indovinato e quali sono questi numeri. L'intervallo di tempo è ripulito utilizzando la funzione "clearTimeout()"
+    
     document.getElementById("risultato").textContent = `Hai indovinato ${indovinati.length} numeri: ${indovinati.join(", ")}`;
     clearTimeout(interval);
     numeri = [];
